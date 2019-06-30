@@ -7,3 +7,10 @@ class MainPageLocators(object):
 class LoginPageLocators(object):
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "form#register_form")
+
+class ProductPageLocators(object):
+    ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, "form#add_to_basket_form > button.btn-add-to-basket")
+    PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main > h1")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, "div.product_main > p.price_color")
+    BASKET_PRODUCT_NAME = (By.CSS_SELECTOR, "div#messages > div.alert-success > div.alertinner > strong")
+    BASKET_PRODUCT_PRICE = (By.CSS_SELECTOR, "div#messages > div.alert-info > div.alertinner > p > strong")
