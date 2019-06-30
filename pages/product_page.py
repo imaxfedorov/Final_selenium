@@ -44,3 +44,10 @@ class ProductPage(BasePage):
 
     def compare_name(self, name):
         assert name == self.browser.find_element(*ProductPageLocators.BASKET_PRODUCT_NAME).text, "Name is incorrect"
+
+    def should_not_be_success_message(self):
+        assert not self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented"
+
+    def should_dissapear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message isn't dissapear"
